@@ -145,7 +145,6 @@ class SearchPage extends React.Component<SearchPageProps, SearchPageState> {
 
   public renderAlbums = () => {
     const { albums } = this.state.results;
-
     if (!albums || albums.length === 0) {
       return null;
     }

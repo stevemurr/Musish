@@ -7,12 +7,12 @@ import withMK from '../../../../hoc/withMK';
 import translate from '../../../../utils/translations/Translations';
 import { hasAttributes } from '../../../../utils/Utils';
 import Loader from '../../Loader/Loader';
+import Player from '../../Player/Player';
 import AlbumResultItem from './AlbumResultItem';
 import ArtistResultItem from './ArtistResultItem';
-import PlaylistResultItem from './PlaylistResultItem';
 import classes from './SearchBar.scss';
+import PlaylistResultItem from './PlaylistResultItem';
 import SongResultItem from './SongResultItem';
-
 type SearchBarProps = RouteComponentProps & MKProps;
 
 interface SearchBarState {
@@ -30,7 +30,7 @@ class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
     super(props);
 
     this.state = {
-      showResults: false,
+      showResults: true,
       query: '',
       catalogData: null,
       libraryData: null,
@@ -64,10 +64,6 @@ class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
     if ((event.target as HTMLElement).closest('.react-contextmenu')) {
       return;
     }
-
-    this.setState({
-      showResults: false,
-    });
   };
 
   public handleSearch = async ({ target: { value: query } }: ChangeEvent<HTMLInputElement>) => {
@@ -106,7 +102,7 @@ class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
   public searchCatalog = async (query: string) => {
     const catalogData = await this.props.mk.instance.api.search(query, {
       types: ['albums', 'songs', 'playlists', 'artists'],
-      limit: 3,
+      limit: 5, 
     });
 
     this.setState({
@@ -216,12 +212,10 @@ class SearchBar extends React.Component<SearchBarProps, SearchBarState> {
               onChange={this.handleSearch}
               onFocus={this.handleShowResults}
             />
-            <button type={'submit'}>
-              <i className={'fas fa-search'} />
-            </button>
           </form>
 
           <div className={cx(classes.results, { [classes.show]: showResults })}>
+            <Player />
             <div className={classes.resultsContainer}>{this.renderResults()}</div>
           </div>
         </div>
