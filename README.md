@@ -12,7 +12,6 @@ This repo requires `node` version `14`.  A great way to install & manage node ru
 ### Start dev server
 `yarn start`
 
-
 ## Explorations
 
 ### Genre Venn Diagram
@@ -28,3 +27,7 @@ The experience of any art is linked to the time and space you experience it in. 
 Timelines are an obvious visualization of information with relation to time.
 
 ![](.docs/timeline.jpg)
+
+### Synesthesia
+
+[While listening to music some people simeltanously experience the sensation of color.](https://en.wikipedia.org/wiki/Synesthesia).  Modern software interfaces don't explore cognitive shortcuts through use of color.  Does use of color in the interface improve discovery?

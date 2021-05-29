@@ -4,29 +4,29 @@ $splash_background_color: #fb453f;
 
 $brand_color: #222222;
 
-$background_color: #ffffff;
+$background_color: black;
 
 
 $background_tint_color: #eeeeee;
 $background_tint_color_strong: #cccccc;
 
-$container_background: #f7f7f7;
+$container_background: black;
 
-$track_background_color: rgba(220, 220, 220, 0.5);
+$track_background_color: rgba(0,0,0, 0.3);
 $sidebar_color: #f9f9f9;
 
 $accent_color: #fe2851;
 $secondary_color: #aaaaaa;
-$indiscreet_hover_color: #f9f9f9;
+$indiscreet_hover_color:grey;
 $tertiary_color: #666666;
 
-$text_color: #666666;
-$text_color_strong: #333333;
-$text_color_weak: #999999;
+$text_color:white;
+$text_color_strong: white;
+$text_color_weak: white;
 
 
-$player_button_color: #111111;
-$player_secondary_button_color: #888888;
-$player_volume_container_color: rgba(255, 255, 255, 0.8);
+$player_button_color: white;
+$player_secondary_button_color:white;
+$player_volume_container_color: rgba(255, 255, 255, 0.7);
 
 $placeholder_container_color: #cccccc;

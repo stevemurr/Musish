@@ -8,7 +8,6 @@ import ConnectedMenu from './Common/ContextMenu/ContextMenu';
 import LyricsModal from './Common/Player/Lyrics/LyricsModal';
 import Layout from './Layout';
 import AuthorizeProvider from './Providers/AuthorizeProvider';
-import GoogleAnalyticsProvider from './Providers/GoogleAnalyticsProvider';
 import LastfmProvider from './Providers/LastfmProvider';
 import LyricsModalProvider from './Providers/LyricsModalProvider';
 import ModalProvider, { ModalRenderer } from './Providers/ModalProvider';
@@ -45,7 +44,6 @@ function App() {
     <SentryBoundary>
       <MusicKitProvider>
         <Router>
-          <GoogleAnalyticsProvider>
             <AuthorizeProvider>
               <PlaylistsProvider>
                 <ModalProvider>
@@ -118,7 +116,6 @@ function App() {
                 </ModalProvider>
               </PlaylistsProvider>
             </AuthorizeProvider>
-          </GoogleAnalyticsProvider>
         </Router>
       </MusicKitProvider>
     </SentryBoundary>
