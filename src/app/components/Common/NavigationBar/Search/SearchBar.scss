@@ -4,8 +4,7 @@
 .navSearch {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
+  width:100%;
   &:hover, &.active {
     .navSearchWrapper {
       input {
@@ -24,7 +23,7 @@
       text-align: center;
       color: $text_color;
       line-height: 15px;
-      width: 40vh;
+      width: 100%;
       background: $background_color;
       font-weight: 800;
       border:none;
@@ -53,16 +52,15 @@
       top: 100%;
       right: 0;
       background: $background_color;
-      width: 40vh;
+      width: 100%;
       overflow-x:hidden;
       overflow-y:hidden;
-      max-height: 100vh;
       box-shadow: 0 8px 36px -10px rgba(150, 150, 150, 0.75);
       border-radius: 6px 6px 6px 6px;
       margin-right: 1px;
       text-align: left;
       flex-direction: column;
-      z-index: 3100;
+      z-index: 100;
 
       &.show {
         display: flex;

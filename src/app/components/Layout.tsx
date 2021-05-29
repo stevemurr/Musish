@@ -1,9 +1,8 @@
 import React, { Component, ReactNode } from 'react';
 import { RouteComponentProps } from 'react-router';
 import { withRouter } from 'react-router-dom';
-import NavigationBar from './Common/NavigationBar/NavigationBar';
+import SearchBar from './Common/NavigationBar/Search/SearchBar';
 import Queue from './Common/Player/Queue/Queue';
-import Sidebar from './Common/Sidebar/Sidebar';
 import { ModalProps, withModal } from './Providers/ModalProvider';
 
 interface LayoutProps extends RouteComponentProps, ModalProps {
@@ -22,12 +21,12 @@ class Layout extends Component<LayoutProps> {
   public render() {
     return (
       <>
-        <NavigationBar />
-
         <div id='main-wrapper'>
           <Queue />
-          <Sidebar />
-          <main id='main-content'>{this.props.children}</main>
+          {/* <Sidebar /> */}
+          <main id='main-content'>
+            <SearchBar /> 
+          </main>
         </div>
       </>
     );
